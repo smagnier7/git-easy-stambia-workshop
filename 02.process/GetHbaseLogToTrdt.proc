@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proc:process xmlns:proc="http://www.example.org/proc" id="_RohpI4CYEemlY6iTndw9vg">
+  <parameter id="_RohpJICYEemlY6iTndw9vg" name="RETENTION" type="String" value="30"/>
+  <parameter id="_RohpJYCYEemlY6iTndw9vg" name="PILAR" type="String" value="WMS"/>
+  <parameter id="_RohpJoCYEemlY6iTndw9vg" name="BU" type="String" value="001"/>
+  <actionCode id="_RohpJ4CYEemlY6iTndw9vg" description="" isBeginAction="false" name="Get Retention Period for Hbase Log" nbCycles="-1" toleratedError="false" technology="com.indy.engine.actionCodes.sqlToParameters">
+    <link id="_RohpKICYEemlY6iTndw9vg" executionType="OK" generationType="OK_KO" mandatory="1" targetId="_RohpKoCYEemlY6iTndw9vg"/>
+    <metaDataLink id="_RohpKYCYEemlY6iTndw9vg" name="BV_TEC" target="../../serverConfigurations/teradataDwh1.md#_6M8VcBx_EeiIkZ0m_Wy3GA?fileId=_QNnCQDY8Eeevy5wHJGzQUA$type=md$name=BV_TEC?"/>
+    <code>&lt;sqlToParameters>&#xD;
+&lt;parameter name=&quot;~/RETENTION&quot; type=&quot;String&quot;>&#xD;
+select to_char(current_date - ${~/RETENTION}$, 'YYYYMMDDhhmmss')&#xD;
+&lt;/parameter>&#xD;
+&lt;/sqlToParameters></code>
+  </actionCode>
+  <actionCode id="_RohpKoCYEemlY6iTndw9vg" description="" isBeginAction="false" name="Create Table TKGEN_HBASE_LINEAGE" nbCycles="-1" toleratedError="true" technology="com.indy.engine.actionCodes.JdbcActionCodeI">
+    <link id="_XsfEkIFeEemQUJxAJ008CA" executionType="OK" generationType="OK_KO" mandatory="1" targetId="_RohpNYCYEemlY6iTndw9vg"/>
+    <metaDataLink id="_RohpLICYEemlY6iTndw9vg" name="BV_TEC" target="../01.metadata/TrdtBvTec.md#_RocwgICYEemlY6iTndw9vg?fileId=_RocwgICYEemlY6iTndw9vg$type=md$name=BV_TEC?"/>
+    <parameter id="_RohpLYCYEemlY6iTndw9vg" name="SQL_ACTION_TYPE" type="String" value="DDL_DML"/>
+    <parameter id="_RohpLoCYEemlY6iTndw9vg" name="SQL_CONNECTION" type="String"/>
+    <code>CREATE MULTISET TABLE %x{md:physicalPath($BV_TEC,'schemaName')}x%.TKGEN_HBASE_LINEAGE,&#xD;
+	 NO FALLBACK ,&#xD;
+     NO BEFORE JOURNAL,&#xD;
+     NO AFTER JOURNAL,&#xD;
+     CHECKSUM = DEFAULT,&#xD;
+     DEFAULT MERGEBLOCKRATIO&#xD;
+     (  &#xD;
+		ROWKEY VARCHAR(100) CHARACTER SET LATIN NOT CASESPECIFIC NOT NULL ,&#xD;
+		ENV VARCHAR(5) CHARACTER SET LATIN NOT CASESPECIFIC ,&#xD;
+		BU VARCHAR(3) CHARACTER SET LATIN NOT CASESPECIFIC ,&#xD;
+		PILAR VARCHAR(50) CHARACTER SET LATIN NOT CASESPECIFIC ,&#xD;
+		GLOBAL_ENTITY VARCHAR(50) CHARACTER SET LATIN NOT CASESPECIFIC ,&#xD;
+		FILENAME VARCHAR(250) CHARACTER SET LATIN NOT CASESPECIFIC ,&#xD;
+		FILESIZE VARCHAR(250) CHARACTER SET LATIN NOT CASESPECIFIC ,&#xD;
+		LINEAGE_KEY VARCHAR(250) CHARACTER SET LATIN NOT CASESPECIFIC ,&#xD;
+		SEQUENCE_NUMBER VARCHAR(10) CHARACTER SET LATIN NOT CASESPECIFIC ,&#xD;
+		STEP VARCHAR(50) CHARACTER SET LATIN NOT CASESPECIFIC ,&#xD;
+		STEP_START TIMESTAMP(6)  ,&#xD;
+		STEP_END TIMESTAMP(6) ,&#xD;
+		STEP_STATUS VARCHAR(50) CHARACTER SET LATIN NOT CASESPECIFIC ,&#xD;
+		STEP_MESSAGE VARCHAR(250) CHARACTER SET LATIN NOT CASESPECIFIC ,&#xD;
+		RECORD_COUNT DECIMAL(15,0)&#xD;
+	)&#xD;
+	UNIQUE PRIMARY INDEX (ROWKEY)&#xD;
+;</code>
+  </actionCode>
+  <actionProcessRef id="_RohpNYCYEemlY6iTndw9vg" description="" enable="true" isBeginAction="false" name="UPSERT_TKGEN_HBASE_LINEAGE" nbCycles="-1" toleratedError="false" processMap="true" targetName="../03.mapping/TKGEN_HBASE_LINEAGE.map#_Roga7oCYEemlY6iTndw9vg?fileId=_Roga7oCYEemlY6iTndw9vg$name=TKGEN_HBASE_LINEAGE$type=map?"/>
+</proc:process>

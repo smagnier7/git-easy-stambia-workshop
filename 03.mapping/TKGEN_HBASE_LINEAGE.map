@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map:map xmlns:map="http://www.indy.com/v2/map" id="_Roga7oCYEemlY6iTndw9vg" internalVersion="3" tech="platform:/plugin/com.indy.environment/.tech/map/map.tech#_waYSMH8VEd2__Mzb_dB76A?fileId=_waYSMH8VEd2__Mzb_dB76A$type=tech$name=flow?">
+  <datastore id="_Roga74CYEemlY6iTndw9vg" alias="TKGEN_HBASE_LINEAGE" dataset="_RohpIICYEemlY6iTndw9vg" ref="../01.metadata/TrdtBvTec.md#_RodXkYCYEemlY6iTndw9vg?fileId=_RocwgICYEemlY6iTndw9vg$type=md$name=TKGEN_HBASE_LINEAGE?" subExpression="[A]">
+    <field id="_Roga8ICYEemlY6iTndw9vg" enable="true" insert="true" name="RECORD_COUNT" ref="../01.metadata/TrdtBvTec.md#_RofMzYCYEemlY6iTndw9vg?fileId=_RocwgICYEemlY6iTndw9vg$type=md$name=RECORD_COUNT?" update="true">
+      <expression id="_Roga8YCYEemlY6iTndw9vg" setDescriptorRef="_RohCCICYEemlY6iTndw9vg">
+        <expression>TFGEN_TEC_LINEAGE.f1/record_count</expression>
+      </expression>
+    </field>
+    <field id="_Roga8oCYEemlY6iTndw9vg" enable="true" insert="true" name="GLOBAL_ENTITY" ref="../01.metadata/TrdtBvTec.md#_Rod-uYCYEemlY6iTndw9vg?fileId=_RocwgICYEemlY6iTndw9vg$type=md$name=GLOBAL_ENTITY?" update="true">
+      <expression id="_Roga84CYEemlY6iTndw9vg" setDescriptorRef="_RohCCICYEemlY6iTndw9vg">
+        <expression>TFGEN_TEC_LINEAGE.f1/entity</expression>
+      </expression>
+    </field>
+    <field id="_Roga9ICYEemlY6iTndw9vg" enable="true" insert="true" name="ENV" ref="../01.metadata/TrdtBvTec.md#_Rod-qYCYEemlY6iTndw9vg?fileId=_RocwgICYEemlY6iTndw9vg$type=md$name=ENV?" update="true">
+      <expression id="_Roga9YCYEemlY6iTndw9vg" setDescriptorRef="_RohCCICYEemlY6iTndw9vg">
+        <expression>TFGEN_TEC_LINEAGE.f1/ENV</expression>
+      </expression>
+    </field>
+    <field id="_RohB8ICYEemlY6iTndw9vg" enable="true" insert="true" name="BU" ref="../01.metadata/TrdtBvTec.md#_Rod-sYCYEemlY6iTndw9vg?fileId=_RocwgICYEemlY6iTndw9vg$type=md$name=BU?" update="true">
+      <expression id="_RohB8YCYEemlY6iTndw9vg" setDescriptorRef="_RohCCICYEemlY6iTndw9vg">
+        <expression>TFGEN_TEC_LINEAGE.f1/buNumber</expression>
+      </expression>
+    </field>
+    <field id="_RohB8oCYEemlY6iTndw9vg" enable="true" insert="true" name="SEQUENCE_NUMBER" ref="../01.metadata/TrdtBvTec.md#_RoelzYCYEemlY6iTndw9vg?fileId=_RocwgICYEemlY6iTndw9vg$type=md$name=SEQUENCE_NUMBER?" update="true">
+      <expression id="_RohB84CYEemlY6iTndw9vg" setDescriptorRef="_RohCCICYEemlY6iTndw9vg">
+        <expression>TFGEN_TEC_LINEAGE.f1/sequenceNumber</expression>
+      </expression>
+    </field>
+    <field id="_RohB9ICYEemlY6iTndw9vg" enable="true" insert="true" name="FILESIZE" ref="../01.metadata/TrdtBvTec.md#_RoelvYCYEemlY6iTndw9vg?fileId=_RocwgICYEemlY6iTndw9vg$type=md$name=FILESIZE?" update="true">
+      <expression id="_RohB9YCYEemlY6iTndw9vg" setDescriptorRef="_RohCCICYEemlY6iTndw9vg">
+        <expression>TFGEN_TEC_LINEAGE.f1/fileSize</expression>
+      </expression>
+    </field>
+    <field id="_RohB9oCYEemlY6iTndw9vg" enable="true" insert="true" name="ROWKEY" ref="../01.metadata/TrdtBvTec.md#_Rod-oYCYEemlY6iTndw9vg?fileId=_RocwgICYEemlY6iTndw9vg$type=md$name=ROWKEY?" update="true" updateKey="true">
+      <expression id="_RohB94CYEemlY6iTndw9vg" setDescriptorRef="_RohCCICYEemlY6iTndw9vg">
+        <expression>TFGEN_TEC_LINEAGE.row_key</expression>
+      </expression>
+    </field>
+    <field id="_RohB-ICYEemlY6iTndw9vg" enable="true" insert="true" name="STEP_START" ref="../01.metadata/TrdtBvTec.md#_Roel3YCYEemlY6iTndw9vg?fileId=_RocwgICYEemlY6iTndw9vg$type=md$name=STEP_START?" update="true">
+      <expression id="_RohB-YCYEemlY6iTndw9vg" location="WRK" setDescriptorRef="_RohCCICYEemlY6iTndw9vg">
+        <expression>TO_TIMESTAMP(TFGEN_TEC_LINEAGE.f1/stepStartTS , 'yyyymmddhh24missff3')</expression>
+      </expression>
+    </field>
+    <field id="_RohB-oCYEemlY6iTndw9vg" enable="true" insert="true" name="STEP" ref="../01.metadata/TrdtBvTec.md#_Roel1YCYEemlY6iTndw9vg?fileId=_RocwgICYEemlY6iTndw9vg$type=md$name=STEP?" update="true">
+      <expression id="_RohB-4CYEemlY6iTndw9vg" setDescriptorRef="_RohCCICYEemlY6iTndw9vg">
+        <expression>TFGEN_TEC_LINEAGE.f1/step</expression>
+      </expression>
+    </field>
+    <field id="_RohB_ICYEemlY6iTndw9vg" enable="true" insert="true" name="FILENAME" ref="../01.metadata/TrdtBvTec.md#_RoeltYCYEemlY6iTndw9vg?fileId=_RocwgICYEemlY6iTndw9vg$type=md$name=FILENAME?" update="true">
+      <expression id="_RohB_YCYEemlY6iTndw9vg" setDescriptorRef="_RohCCICYEemlY6iTndw9vg">
+        <expression>TFGEN_TEC_LINEAGE.f1/filename</expression>
+      </expression>
+    </field>
+    <field id="_RohB_oCYEemlY6iTndw9vg" enable="true" insert="true" name="LINEAGE_KEY" ref="../01.metadata/TrdtBvTec.md#_RoelxYCYEemlY6iTndw9vg?fileId=_RocwgICYEemlY6iTndw9vg$type=md$name=LINEAGE_KEY?" update="true">
+      <expression id="_RohB_4CYEemlY6iTndw9vg" setDescriptorRef="_RohCCICYEemlY6iTndw9vg">
+        <expression>TFGEN_TEC_LINEAGE.f1/lineageKey</expression>
+      </expression>
+    </field>
+    <field id="_RohCAICYEemlY6iTndw9vg" enable="true" insert="true" name="STEP_END" ref="../01.metadata/TrdtBvTec.md#_Roel5YCYEemlY6iTndw9vg?fileId=_RocwgICYEemlY6iTndw9vg$type=md$name=STEP_END?" update="true">
+      <expression id="_RohCAYCYEemlY6iTndw9vg" location="WRK" setDescriptorRef="_RohCCICYEemlY6iTndw9vg">
+        <expression>TO_TIMESTAMP(TFGEN_TEC_LINEAGE.f1/stepEndTS , 'yyyymmddhh24missff3')</expression>
+      </expression>
+    </field>
+    <field id="_RohCAoCYEemlY6iTndw9vg" enable="true" insert="true" name="STEP_MESSAGE" ref="../01.metadata/TrdtBvTec.md#_RofMxYCYEemlY6iTndw9vg?fileId=_RocwgICYEemlY6iTndw9vg$type=md$name=STEP_MESSAGE?" update="true">
+      <expression id="_RohCA4CYEemlY6iTndw9vg" setDescriptorRef="_RohCCICYEemlY6iTndw9vg">
+        <expression>TFGEN_TEC_LINEAGE.f1/stepMessage</expression>
+      </expression>
+    </field>
+    <field id="_RohCBICYEemlY6iTndw9vg" enable="true" insert="true" name="STEP_STATUS" ref="../01.metadata/TrdtBvTec.md#_Roel7YCYEemlY6iTndw9vg?fileId=_RocwgICYEemlY6iTndw9vg$type=md$name=STEP_STATUS?" update="true">
+      <expression id="_RohCBYCYEemlY6iTndw9vg" setDescriptorRef="_RohCCICYEemlY6iTndw9vg">
+        <expression>TFGEN_TEC_LINEAGE.f1/stepStatus</expression>
+      </expression>
+    </field>
+    <field id="_RohCBoCYEemlY6iTndw9vg" enable="true" insert="true" name="PILAR" ref="../01.metadata/TrdtBvTec.md#_RofM1YCYEemlY6iTndw9vg?fileId=_RocwgICYEemlY6iTndw9vg$type=md$name=PILAR?" update="true">
+      <expression id="_RohCB4CYEemlY6iTndw9vg" setDescriptorRef="_RohCCICYEemlY6iTndw9vg">
+        <expression>TFGEN_TEC_LINEAGE.f1/pillar</expression>
+      </expression>
+    </field>
+    <setDescriptor id="_RohCCICYEemlY6iTndw9vg" label="A"/>
+  </datastore>
+  <datastore id="_RohpAICYEemlY6iTndw9vg" alias="TFGEN_TEC_LINEAGE" dataset="_RohpIYCYEemlY6iTndw9vg" ref="../01.metadata/hbaseDdp1BdTec.md#_Rofz0YCYEemlY6iTndw9vg?fileId=_RofM3YCYEemlY6iTndw9vg$type=md$name=TFGEN_TEC_LINEAGE?">
+    <field id="_RohpAYCYEemlY6iTndw9vg" name="initialFilename" parent="_RohpA4CYEemlY6iTndw9vg" ref="../01.metadata/hbaseDdp1BdTec.md#_Rofz8ICYEemlY6iTndw9vg?fileId=_RofM3YCYEemlY6iTndw9vg$type=md$name=initialFilename?"/>
+    <field id="_RohpAoCYEemlY6iTndw9vg" name="lineageKey" parent="_RohpA4CYEemlY6iTndw9vg" ref="../01.metadata/hbaseDdp1BdTec.md#_Rofz8oCYEemlY6iTndw9vg?fileId=_RofM3YCYEemlY6iTndw9vg$type=md$name=lineageKey?"/>
+    <field id="_RohpA4CYEemlY6iTndw9vg" expand="true" name="f1" ref="../01.metadata/hbaseDdp1BdTec.md#_Rofz1oCYEemlY6iTndw9vg?fileId=_RofM3YCYEemlY6iTndw9vg$type=md$name=f1?"/>
+    <field id="_RohpBICYEemlY6iTndw9vg" name="stepStartTS" parent="_RohpA4CYEemlY6iTndw9vg" ref="../01.metadata/hbaseDdp1BdTec.md#_Roga4ICYEemlY6iTndw9vg?fileId=_RofM3YCYEemlY6iTndw9vg$type=md$name=stepStartTS?"/>
+    <field id="_RohpBYCYEemlY6iTndw9vg" name="extractionDate" parent="_RohpA4CYEemlY6iTndw9vg" ref="../01.metadata/hbaseDdp1BdTec.md#_Rofz6ICYEemlY6iTndw9vg?fileId=_RofM3YCYEemlY6iTndw9vg$type=md$name=extractionDate?"/>
+    <field id="_RohpBoCYEemlY6iTndw9vg" name="stepStatus" parent="_RohpA4CYEemlY6iTndw9vg" ref="../01.metadata/hbaseDdp1BdTec.md#_Roga4oCYEemlY6iTndw9vg?fileId=_RofM3YCYEemlY6iTndw9vg$type=md$name=stepStatus?"/>
+    <field id="_RohpB4CYEemlY6iTndw9vg" name="entity" parent="_RohpA4CYEemlY6iTndw9vg" ref="../01.metadata/hbaseDdp1BdTec.md#_Rofz5oCYEemlY6iTndw9vg?fileId=_RofM3YCYEemlY6iTndw9vg$type=md$name=entity?"/>
+    <field id="_RohpCICYEemlY6iTndw9vg" name="prm" parent="_RohpA4CYEemlY6iTndw9vg" ref="../01.metadata/hbaseDdp1BdTec.md#_Rofz9oCYEemlY6iTndw9vg?fileId=_RofM3YCYEemlY6iTndw9vg$type=md$name=prm?"/>
+    <field id="_RohpCYCYEemlY6iTndw9vg" name="buNumber" parent="_RohpA4CYEemlY6iTndw9vg" ref="../01.metadata/hbaseDdp1BdTec.md#_Rofz2oCYEemlY6iTndw9vg?fileId=_RofM3YCYEemlY6iTndw9vg$type=md$name=buNumber?"/>
+    <field id="_RohpCoCYEemlY6iTndw9vg" name="globalEntity" parent="_RohpA4CYEemlY6iTndw9vg" ref="../01.metadata/hbaseDdp1BdTec.md#_Rofz7oCYEemlY6iTndw9vg?fileId=_RofM3YCYEemlY6iTndw9vg$type=md$name=globalEntity?"/>
+    <field id="_RohpC4CYEemlY6iTndw9vg" name="dataFormat" parent="_RohpA4CYEemlY6iTndw9vg" ref="../01.metadata/hbaseDdp1BdTec.md#_Rofz3ICYEemlY6iTndw9vg?fileId=_RofM3YCYEemlY6iTndw9vg$type=md$name=dataFormat?"/>
+    <field id="_RohpDICYEemlY6iTndw9vg" name="filename" parent="_RohpA4CYEemlY6iTndw9vg" ref="../01.metadata/hbaseDdp1BdTec.md#_Rofz6oCYEemlY6iTndw9vg?fileId=_RofM3YCYEemlY6iTndw9vg$type=md$name=filename?"/>
+    <field id="_RohpDYCYEemlY6iTndw9vg" expand="true" name="row_key" ref="../01.metadata/hbaseDdp1BdTec.md#_Rofz04CYEemlY6iTndw9vg?fileId=_RofM3YCYEemlY6iTndw9vg$type=md$name=row_key?"/>
+    <field id="_RohpDoCYEemlY6iTndw9vg" name="flowStartTS" parent="_RohpA4CYEemlY6iTndw9vg" ref="../01.metadata/hbaseDdp1BdTec.md#_Rofz7ICYEemlY6iTndw9vg?fileId=_RofM3YCYEemlY6iTndw9vg$type=md$name=flowStartTS?"/>
+    <field id="_RohpD4CYEemlY6iTndw9vg" name="lineageStartDate" parent="_RohpA4CYEemlY6iTndw9vg" ref="../01.metadata/hbaseDdp1BdTec.md#_Rofz4oCYEemlY6iTndw9vg?fileId=_RofM3YCYEemlY6iTndw9vg$type=md$name=lineageStartDate?"/>
+    <field id="_RohpEICYEemlY6iTndw9vg" name="uuid" parent="_RohpA4CYEemlY6iTndw9vg" ref="../01.metadata/hbaseDdp1BdTec.md#_Roga5ICYEemlY6iTndw9vg?fileId=_RofM3YCYEemlY6iTndw9vg$type=md$name=uuid?"/>
+    <field id="_RohpEYCYEemlY6iTndw9vg" name="timeLog" parent="_RohpA4CYEemlY6iTndw9vg" ref="../01.metadata/hbaseDdp1BdTec.md#_Rofz5ICYEemlY6iTndw9vg?fileId=_RofM3YCYEemlY6iTndw9vg$type=md$name=timeLog?"/>
+    <field id="_RohpEoCYEemlY6iTndw9vg" name="entryDate" parent="_RohpA4CYEemlY6iTndw9vg" ref="../01.metadata/hbaseDdp1BdTec.md#_Rofz3oCYEemlY6iTndw9vg?fileId=_RofM3YCYEemlY6iTndw9vg$type=md$name=entryDate?"/>
+    <field id="_RohpE4CYEemlY6iTndw9vg" name="ENV" parent="_RohpA4CYEemlY6iTndw9vg" ref="../01.metadata/hbaseDdp1BdTec.md#_Rofz2ICYEemlY6iTndw9vg?fileId=_RofM3YCYEemlY6iTndw9vg$type=md$name=ENV?"/>
+    <field id="_RohpFICYEemlY6iTndw9vg" name="stepEndTS" parent="_RohpA4CYEemlY6iTndw9vg" ref="../01.metadata/hbaseDdp1BdTec.md#_Rofz_ICYEemlY6iTndw9vg?fileId=_RofM3YCYEemlY6iTndw9vg$type=md$name=stepEndTS?"/>
+    <field id="_RohpFYCYEemlY6iTndw9vg" name="record_count" parent="_RohpA4CYEemlY6iTndw9vg" ref="../01.metadata/hbaseDdp1BdTec.md#_Roga6oCYEemlY6iTndw9vg?fileId=_RofM3YCYEemlY6iTndw9vg$type=md$name=record_count?"/>
+    <field id="_RohpFoCYEemlY6iTndw9vg" name="pillar" parent="_RohpA4CYEemlY6iTndw9vg" ref="../01.metadata/hbaseDdp1BdTec.md#_Rofz9ICYEemlY6iTndw9vg?fileId=_RofM3YCYEemlY6iTndw9vg$type=md$name=pillar?"/>
+    <field id="_RohpF4CYEemlY6iTndw9vg" name="stepMessage" parent="_RohpA4CYEemlY6iTndw9vg" ref="../01.metadata/hbaseDdp1BdTec.md#_Roga6ICYEemlY6iTndw9vg?fileId=_RofM3YCYEemlY6iTndw9vg$type=md$name=stepMessage?"/>
+    <field id="_RohpGICYEemlY6iTndw9vg" name="_0" parent="_RohpA4CYEemlY6iTndw9vg" ref="../01.metadata/hbaseDdp1BdTec.md#_Roga7ICYEemlY6iTndw9vg?fileId=_RofM3YCYEemlY6iTndw9vg$type=md$name=_0?"/>
+    <field id="_RohpGYCYEemlY6iTndw9vg" name="step" parent="_RohpA4CYEemlY6iTndw9vg" ref="../01.metadata/hbaseDdp1BdTec.md#_Rofz-oCYEemlY6iTndw9vg?fileId=_RofM3YCYEemlY6iTndw9vg$type=md$name=step?"/>
+    <field id="_RohpGoCYEemlY6iTndw9vg" name="prmBu" parent="_RohpA4CYEemlY6iTndw9vg" ref="../01.metadata/hbaseDdp1BdTec.md#_Roga5oCYEemlY6iTndw9vg?fileId=_RofM3YCYEemlY6iTndw9vg$type=md$name=prmBu?"/>
+    <field id="_RohpG4CYEemlY6iTndw9vg" name="sequenceNumber" parent="_RohpA4CYEemlY6iTndw9vg" ref="../01.metadata/hbaseDdp1BdTec.md#_Rofz-ICYEemlY6iTndw9vg?fileId=_RofM3YCYEemlY6iTndw9vg$type=md$name=sequenceNumber?"/>
+    <field id="_RohpHICYEemlY6iTndw9vg" name="fileSize" parent="_RohpA4CYEemlY6iTndw9vg" ref="../01.metadata/hbaseDdp1BdTec.md#_Rofz4ICYEemlY6iTndw9vg?fileId=_RofM3YCYEemlY6iTndw9vg$type=md$name=fileSize?"/>
+  </datastore>
+  <template id="_RohpHoCYEemlY6iTndw9vg" name="I_TKGEN_HBASE_LINEAGE" process="../../global/templates.teradata/INTEGRATION%20Teradata.tp.proc#_GHqK1rlNEeG7HKgVjXqGQQ?fileId=_GHqK1rlNEeG7HKgVjXqGQQ$type=proc$name=INTEGRATION%20Teradata?" targetId="_Roga74CYEemlY6iTndw9vg"/>
+  <template id="_RohpH4CYEemlY6iTndw9vg" name="L1_TKGEN_HBASE_LINEAGE" process="../../global/templates.teradata/LOAD%20Rdbms%20to%20Teradata.proc#_T7CZgpUOEeG9dqmO0VY9JA?fileId=_T7CZgpUOEeG9dqmO0VY9JA$type=proc$name=LOAD%20Rdbms%20to%20Teradata?" sourceId="_RohpAICYEemlY6iTndw9vg" targetId="_Roga74CYEemlY6iTndw9vg"/>
+  <dataSet id="_RohpIICYEemlY6iTndw9vg">
+    <container>_Roga74CYEemlY6iTndw9vg</container>
+  </dataSet>
+  <dataSet id="_RohpIYCYEemlY6iTndw9vg">
+    <container>_RohpAICYEemlY6iTndw9vg</container>
+  </dataSet>
+</map:map>
