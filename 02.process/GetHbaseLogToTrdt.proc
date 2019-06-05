@@ -3,7 +3,7 @@
   <parameter id="_RohpJICYEemlY6iTndw9vg" name="RETENTION" type="String" value="30"/>
   <parameter id="_RohpJYCYEemlY6iTndw9vg" name="PILAR" type="String" value="WMS"/>
   <parameter id="_RohpJoCYEemlY6iTndw9vg" name="BU" type="String" value="001"/>
-  <actionCode id="_RohpJ4CYEemlY6iTndw9vg" description="" isBeginAction="false" name="Get Retention Period for Hbase Log" nbCycles="-1" toleratedError="false" technology="com.indy.engine.actionCodes.sqlToParameters">
+  <actionCode id="_RohpJ4CYEemlY6iTndw9vg" description="This step allows to calculate the recovery date for NiFi lineage data " isBeginAction="false" name="Get Retention Period for Hbase Log" nbCycles="-1" toleratedError="false" technology="com.indy.engine.actionCodes.sqlToParameters">
     <link id="_RohpKICYEemlY6iTndw9vg" executionType="OK" generationType="OK_KO" mandatory="1" targetId="_RohpKoCYEemlY6iTndw9vg"/>
     <metaDataLink id="_RohpKYCYEemlY6iTndw9vg" name="BV_TEC" target="../../serverConfigurations/teradataDwh1.md#_6M8VcBx_EeiIkZ0m_Wy3GA?fileId=_QNnCQDY8Eeevy5wHJGzQUA$type=md$name=BV_TEC?"/>
     <code>&lt;sqlToParameters>&#xD;
@@ -12,7 +12,7 @@ select to_char(current_date - ${~/RETENTION}$, 'YYYYMMDDhhmmss')&#xD;
 &lt;/parameter>&#xD;
 &lt;/sqlToParameters></code>
   </actionCode>
-  <actionCode id="_RohpKoCYEemlY6iTndw9vg" description="" isBeginAction="false" name="Create Table TKGEN_HBASE_LINEAGE" nbCycles="-1" toleratedError="true" technology="com.indy.engine.actionCodes.JdbcActionCodeI">
+  <actionCode id="_RohpKoCYEemlY6iTndw9vg" description="This step creates Log table in Teradata, wich is TKGEN_HBASE_LINEAGE.&#xD;&#xA;Error are accepted due to the possible existence of the table." isBeginAction="false" name="Create Table TKGEN_HBASE_LINEAGE" nbCycles="-1" toleratedError="true" technology="com.indy.engine.actionCodes.JdbcActionCodeI">
     <link id="_XsfEkIFeEemQUJxAJ008CA" executionType="OK" generationType="OK_KO" mandatory="1" targetId="_RohpNYCYEemlY6iTndw9vg"/>
     <metaDataLink id="_RohpLICYEemlY6iTndw9vg" name="BV_TEC" target="../01.metadata/TrdtBvTec.md#_RocwgICYEemlY6iTndw9vg?fileId=_RocwgICYEemlY6iTndw9vg$type=md$name=BV_TEC?"/>
     <parameter id="_RohpLYCYEemlY6iTndw9vg" name="SQL_ACTION_TYPE" type="String" value="DDL_DML"/>
@@ -43,5 +43,5 @@ select to_char(current_date - ${~/RETENTION}$, 'YYYYMMDDhhmmss')&#xD;
 	UNIQUE PRIMARY INDEX (ROWKEY)&#xD;
 ;</code>
   </actionCode>
-  <actionProcessRef id="_RohpNYCYEemlY6iTndw9vg" description="" enable="true" isBeginAction="false" name="UPSERT_TKGEN_HBASE_LINEAGE" nbCycles="-1" toleratedError="false" processMap="true" targetName="../03.mapping/TKGEN_HBASE_LINEAGE.map#_Roga7oCYEemlY6iTndw9vg?fileId=_Roga7oCYEemlY6iTndw9vg$name=TKGEN_HBASE_LINEAGE$type=map?"/>
+  <actionProcessRef id="_RohpNYCYEemlY6iTndw9vg" description="This step allows to feed the Teradata log table from Nifi / Hbase Lineage Table.&#xD;&#xA;&#xD;&#xA;This step use Insert / Update Strategy on ROWKEY on target table &#xD;&#xA;This step use filter on PILAR parameter and RETENTION parameter to upsert data in target table" enable="true" isBeginAction="false" name="UPSERT_TKGEN_HBASE_LINEAGE" nbCycles="-1" toleratedError="false" processMap="true" targetName="../03.mapping/TKGEN_HBASE_LINEAGE.map#_Roga7oCYEemlY6iTndw9vg?fileId=_Roga7oCYEemlY6iTndw9vg$name=TKGEN_HBASE_LINEAGE$type=map?"/>
 </proc:process>
