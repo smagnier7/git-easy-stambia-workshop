@@ -6,4 +6,4 @@ in order to use the generic method to retrieve data from Lineage Table of NiFi-H
  
  if you need some help on how to use it , please refer to Stambia Referent.
  
- 
+ Cette ligne est présente initialement sur l'origin
