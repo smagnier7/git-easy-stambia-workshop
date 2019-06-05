@@ -13,7 +13,7 @@ select to_char(current_date - ${~/RETENTION}$, 'YYYYMMDDhhmmss')&#xD;
 &lt;/sqlToParameters></code>
   </actionCode>
   <actionCode id="_RohpKoCYEemlY6iTndw9vg" description="This step creates Log table in Teradata, wich is TKGEN_HBASE_LINEAGE.&#xD;&#xA;Error are accepted due to the possible existence of the table." isBeginAction="false" name="Create Table TKGEN_HBASE_LINEAGE" nbCycles="-1" toleratedError="true" technology="com.indy.engine.actionCodes.JdbcActionCodeI">
-    <link id="_XsfEkIFeEemQUJxAJ008CA" executionType="OK" generationType="OK_KO" mandatory="1" targetId="_RohpNYCYEemlY6iTndw9vg"/>
+    <link id="_XsfEkIFeEemQUJxAJ008CA" executionType="OK" generationType="OK_KO" mandatory="1" targetId="_RxfakIelEem_qMfl7z6deA"/>
     <metaDataLink id="_RohpLICYEemlY6iTndw9vg" name="BV_TEC" target="../01.metadata/TrdtBvTec.md#_RocwgICYEemlY6iTndw9vg?fileId=_RocwgICYEemlY6iTndw9vg$type=md$name=BV_TEC?"/>
     <parameter id="_RohpLYCYEemlY6iTndw9vg" name="SQL_ACTION_TYPE" type="String" value="DDL_DML"/>
     <parameter id="_RohpLoCYEemlY6iTndw9vg" name="SQL_CONNECTION" type="String"/>
@@ -42,6 +42,16 @@ select to_char(current_date - ${~/RETENTION}$, 'YYYYMMDDhhmmss')&#xD;
 	)&#xD;
 	UNIQUE PRIMARY INDEX (ROWKEY)&#xD;
 ;</code>
+  </actionCode>
+  <actionCode id="_RxfakIelEem_qMfl7z6deA" isBeginAction="false" name="SqlOperation" nbCycles="-1" toleratedError="false" technology="com.indy.engine.actionCodes.JdbcActionCodeI">
+    <link id="_fN9mwIelEem_qMfl7z6deA" executionType="OK" generationType="OK_KO" mandatory="1" targetId="_RohpNYCYEemlY6iTndw9vg"/>
+    <metaDataLink id="_mUZd8IelEem_qMfl7z6deA" name="BV_TEC" target="../01.metadata/TrdtBvTec.md#_RocwgICYEemlY6iTndw9vg?fileId=_RocwgICYEemlY6iTndw9vg$type=md$name=BV_TEC?"/>
+    <parameter id="_RyKI8IelEem_qMfl7z6deA" name="SQL_ACTION_TYPE" type="String" value="DDL_DML"/>
+    <parameter id="_RyKI8YelEem_qMfl7z6deA" name="SQL_CONNECTION" type="String"/>
+    <code>DELETE FROM %x{md:physicalPath($BV_TEC,'schemaName')}x%.TKGEN_HBASE_LINEAGE&#xD;
+WHERE 1 = 1&#xD;
+AND ROWKEY LIKE '${../PILAR}$%'&#xD;
+AND BU = '${../BU}$'</code>
   </actionCode>
   <actionProcessRef id="_RohpNYCYEemlY6iTndw9vg" description="This step allows to feed the Teradata log table from Nifi / Hbase Lineage Table.&#xD;&#xA;&#xD;&#xA;This step use Insert / Update Strategy on ROWKEY on target table &#xD;&#xA;This step use filter on PILAR parameter and RETENTION parameter to upsert data in target table" enable="true" isBeginAction="false" name="UPSERT_TKGEN_HBASE_LINEAGE" nbCycles="-1" toleratedError="false" processMap="true" targetName="../03.mapping/TKGEN_HBASE_LINEAGE.map#_Roga7oCYEemlY6iTndw9vg?fileId=_Roga7oCYEemlY6iTndw9vg$name=TKGEN_HBASE_LINEAGE$type=map?"/>
 </proc:process>
