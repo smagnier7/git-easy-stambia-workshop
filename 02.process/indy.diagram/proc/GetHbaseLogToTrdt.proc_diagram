@@ -18,13 +18,13 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_lbPI4X4DEem6E81C30uNtA" fontName="Segoe UI"/>
     <element xmi:type="proc:ActionCode" href="../../GetHbaseLogToTrdt.proc#_RohpJ4CYEemlY6iTndw9vg"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lbPI4n4DEem6E81C30uNtA" x="60" y="-15"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lbPI4n4DEem6E81C30uNtA" x="50" y="-165"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_cqUQYH4EEem6E81C30uNtA" type="2005">
     <children xmi:type="notation:Node" xmi:id="_cqXTsH4EEem6E81C30uNtA" type="5005"/>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_cqUQYX4EEem6E81C30uNtA" fontName="Segoe UI"/>
     <element xmi:type="proc:Parameter" href="../../GetHbaseLogToTrdt.proc#_RohpJICYEemlY6iTndw9vg"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cqUQYn4EEem6E81C30uNtA" x="395" y="235"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cqUQYn4EEem6E81C30uNtA" x="950" y="70"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_-JfD8H4GEem6E81C30uNtA" type="2001">
     <children xmi:type="notation:Node" xmi:id="_-JiHQH4GEem6E81C30uNtA" type="5001"/>
@@ -44,13 +44,13 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_-JfD8X4GEem6E81C30uNtA" fontName="Segoe UI"/>
     <element xmi:type="proc:ActionCode" href="../../GetHbaseLogToTrdt.proc#_RohpKoCYEemlY6iTndw9vg"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-JfD8n4GEem6E81C30uNtA" x="35" y="120"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-JfD8n4GEem6E81C30uNtA" x="30" y="140"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_rL9A8H4cEem6E81C30uNtA" type="2005">
     <children xmi:type="notation:Node" xmi:id="_rMBSYH4cEem6E81C30uNtA" type="5005"/>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_rL9A8X4cEem6E81C30uNtA" fontName="Segoe UI"/>
     <element xmi:type="proc:Parameter" href="../../GetHbaseLogToTrdt.proc#_RohpJYCYEemlY6iTndw9vg"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rL9A8n4cEem6E81C30uNtA" x="395" y="210"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rL9A8n4cEem6E81C30uNtA" x="950" y="40"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_vVrkgH4eEem6E81C30uNtA" type="2003">
     <children xmi:type="notation:Node" xmi:id="_vVxEEH4eEem6E81C30uNtA" type="5003"/>
@@ -66,13 +66,33 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_vVrkgX4eEem6E81C30uNtA" fontName="Segoe UI"/>
     <element xmi:type="proc:ActionProcessRef" href="../../GetHbaseLogToTrdt.proc#_RohpNYCYEemlY6iTndw9vg"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vVrkgn4eEem6E81C30uNtA" x="50" y="405"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vVrkgn4eEem6E81C30uNtA" x="45" y="425"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_m3ngIH4rEem6E81C30uNtA" type="2005">
     <children xmi:type="notation:Node" xmi:id="_m3ngI34rEem6E81C30uNtA" type="5005"/>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_m3ngIX4rEem6E81C30uNtA" fontName="Segoe UI"/>
     <element xmi:type="proc:Parameter" href="../../GetHbaseLogToTrdt.proc#_RohpJoCYEemlY6iTndw9vg"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m3ngIn4rEem6E81C30uNtA" x="395" y="260"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m3ngIn4rEem6E81C30uNtA" x="950" y="15"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_RyLXEIelEem_qMfl7z6deA" type="2001">
+    <children xmi:type="notation:Node" xmi:id="_RyQPkIelEem_qMfl7z6deA" type="5001"/>
+    <children xmi:type="notation:Node" xmi:id="_RyQPkYelEem_qMfl7z6deA" type="7001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_RyRdsIelEem_qMfl7z6deA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_RyRdsYelEem_qMfl7z6deA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_RyRdsoelEem_qMfl7z6deA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_RyRds4elEem_qMfl7z6deA" type="7002">
+      <children xmi:type="notation:Node" xmi:id="_mUrx0IelEem_qMfl7z6deA" type="3002">
+        <element xmi:type="proc:MetaDataLink" href="../../GetHbaseLogToTrdt.proc#_mUZd8IelEem_qMfl7z6deA"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_mUrx0YelEem_qMfl7z6deA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_RyRdtIelEem_qMfl7z6deA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_RyRdtYelEem_qMfl7z6deA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_RyRdtoelEem_qMfl7z6deA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_RyLXEYelEem_qMfl7z6deA" fontName="Segoe UI"/>
+    <element xmi:type="proc:ActionCode" href="../../GetHbaseLogToTrdt.proc#_RxfakIelEem_qMfl7z6deA"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RyLXEoelEem_qMfl7z6deA" x="65" y="290"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_Dkt7kH4dEem6E81C30uNtA" type="Note" fontName="Segoe UI" bold="true" description="../  Read me  \..&#xD;&#xA;&#xD;&#xA;This process allows you to copy data from Hbase lineage table (wich is NoSql use) to Teradata , on order to manage your dataflow from NiFi.&#xD;&#xA;The process need three parameter to work : &#xD;&#xA;&#xD;&#xA;1) RETENTION : this parameter represents the depth of history that you want to have in Teradata , in days (default 30 days)&#xD;&#xA;&#xD;&#xA;2) PILAR : this parameter represents the pilar that you have to define in NiFi in order to generate Hbase Table TTGEN and TTCGEN (you can find it in NiFi configuration files)&#xD;&#xA;&#xD;&#xA;3) BU : this parameter represents BU identification (ex : 001 for LMFR)" fillColor="8444306" transparency="0" lineColor="6737151" lineWidth="1">
     <children xmi:type="notation:BasicDecorationNode" xmi:id="_DkvwwH4dEem6E81C30uNtA" type="DiagramName">
@@ -84,7 +104,7 @@
     <styles xmi:type="notation:TextStyle" xmi:id="_Dkt7kX4dEem6E81C30uNtA"/>
     <styles xmi:type="notation:LineTypeStyle" xmi:id="_Dkt7kn4dEem6E81C30uNtA"/>
     <element xsi:nil="true"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Dkt7k34dEem6E81C30uNtA" x="652" y="-12" width="471" height="246"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Dkt7k34dEem6E81C30uNtA" x="465" y="-165" width="471" height="246"/>
   </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_iKBPwX4DEem6E81C30uNtA"/>
   <element xmi:type="proc:ActionProcess" href="../../GetHbaseLogToTrdt.proc#_RohpI4CYEemlY6iTndw9vg?fileId=_RohpI4CYEemlY6iTndw9vg$type=proc$name=GetHbaseLogToTrdt?"/>
@@ -92,15 +112,24 @@
     <styles xmi:type="notation:RoutingStyle" xmi:id="_cBP94X4HEem6E81C30uNtA"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_cBP94n4HEem6E81C30uNtA" fontName="Segoe UI"/>
     <element xmi:type="proc:Link" href="../../GetHbaseLogToTrdt.proc#_RohpKICYEemlY6iTndw9vg"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_cBP9434HEem6E81C30uNtA" points="[0, 0, 0, -186]$[0, 186, 0, 0]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_cBP9434HEem6E81C30uNtA" points="[0, 0, 0, -246]$[0, 246, 0, 0]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_cBSaIH4HEem6E81C30uNtA" id="(0.5,1.0)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_cBTBMH4HEem6E81C30uNtA" id="(0.5,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_cBTBMH4HEem6E81C30uNtA" id="(0.4981949458483754,0.0)"/>
   </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_XsgSsIFeEemQUJxAJ008CA" type="4001" source="_-JfD8H4GEem6E81C30uNtA" target="_vVrkgH4eEem6E81C30uNtA">
+  <edges xmi:type="notation:Edge" xmi:id="_XsgSsIFeEemQUJxAJ008CA" type="4001" source="_-JfD8H4GEem6E81C30uNtA" target="_RyLXEIelEem_qMfl7z6deA">
     <styles xmi:type="notation:RoutingStyle" xmi:id="_XsgSsYFeEemQUJxAJ008CA"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_XsgSsoFeEemQUJxAJ008CA" fontName=".SF NS Text"/>
     <element xmi:type="proc:Link" href="../../GetHbaseLogToTrdt.proc#_XsfEkIFeEemQUJxAJ008CA"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XsgSs4FeEemQUJxAJ008CA" points="[-9, 20, -25, -193]$[-79, 216, -95, 3]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XsiH4IFeEemQUJxAJ008CA" id="(0.4253393665158371,1.0)"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XsgSs4FeEemQUJxAJ008CA" points="[0, 0, 0, -60]$[0, 60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XsiH4IFeEemQUJxAJ008CA" id="(0.4981949458483754,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_e3MFgIelEem_qMfl7z6deA" id="(0.5,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_fOE7gIelEem_qMfl7z6deA" type="4001" source="_RyLXEIelEem_qMfl7z6deA" target="_vVrkgH4eEem6E81C30uNtA">
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_fOE7gYelEem_qMfl7z6deA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_fOE7goelEem_qMfl7z6deA" fontName="Segoe UI"/>
+    <element xmi:type="proc:Link" href="../../GetHbaseLogToTrdt.proc#_fN9mwIelEem_qMfl7z6deA"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fOE7g4elEem_qMfl7z6deA" points="[0, 0, 0, -60]$[0, 60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fOJ0AIelEem_qMfl7z6deA" id="(0.5,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fOJ0AYelEem_qMfl7z6deA" id="(0.5,0.0)"/>
   </edges>
 </notation:Diagram>

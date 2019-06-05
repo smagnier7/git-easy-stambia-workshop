@@ -108,6 +108,12 @@
     <field id="_RohpG4CYEemlY6iTndw9vg" name="sequenceNumber" parent="_RohpA4CYEemlY6iTndw9vg" ref="../01.metadata/hbaseDdp1BdTec.md#_Rofz-ICYEemlY6iTndw9vg?fileId=_RofM3YCYEemlY6iTndw9vg$type=md$name=sequenceNumber?"/>
     <field id="_RohpHICYEemlY6iTndw9vg" name="fileSize" parent="_RohpA4CYEemlY6iTndw9vg" ref="../01.metadata/hbaseDdp1BdTec.md#_Rofz4ICYEemlY6iTndw9vg?fileId=_RofM3YCYEemlY6iTndw9vg$type=md$name=fileSize?"/>
   </datastore>
+  <filter id="_85TDsIekEem_qMfl7z6deA" location="SRC">
+    <expression><![CDATA[/* additionalProperties TFGEN_TEC_LINEAGE.row_key = 1 */
+filters=SingleColumnValueFilter ('f1', 'stepStartTS', >=, 'binary:${~/RETENTION}$')
+scan.startRow=string:${~/PILAR}$#${BU}$
+scan.stopRow=string:${~/PILAR}$$]]></expression>
+  </filter>
   <template id="_RohpHoCYEemlY6iTndw9vg" name="I_TKGEN_HBASE_LINEAGE" process="../../global/templates.teradata/INTEGRATION%20Teradata.tp.proc#_GHqK1rlNEeG7HKgVjXqGQQ?fileId=_GHqK1rlNEeG7HKgVjXqGQQ$type=proc$name=INTEGRATION%20Teradata?" targetId="_Roga74CYEemlY6iTndw9vg"/>
   <template id="_RohpH4CYEemlY6iTndw9vg" name="L1_TKGEN_HBASE_LINEAGE" process="../../global/templates.teradata/LOAD%20Rdbms%20to%20Teradata.proc#_T7CZgpUOEeG9dqmO0VY9JA?fileId=_T7CZgpUOEeG9dqmO0VY9JA$type=proc$name=LOAD%20Rdbms%20to%20Teradata?" sourceId="_RohpAICYEemlY6iTndw9vg" targetId="_Roga74CYEemlY6iTndw9vg"/>
   <dataSet id="_RohpIICYEemlY6iTndw9vg">
